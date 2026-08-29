@@ -25,3 +25,7 @@ repository regresses.
 ### Is this affiliated with GitHub?
 
 No. Independent tool, not affiliated with GitHub, Inc.
+
+### Can I order updates to my delivery?
+
+Yes - message us on Telegram mid-delivery and we adjust the pacing.
