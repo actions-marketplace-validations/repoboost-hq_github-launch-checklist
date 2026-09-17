@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "github-launch-checklist"
-version = "1.0.0"
+version = "1.0.1"
 description = "Audit a GitHub repository before launch - ten readiness checks, scored 0-10"
 readme = "README.md"
 requires-python = ">=3.9"

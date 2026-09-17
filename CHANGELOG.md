@@ -2,6 +2,15 @@
 
 All notable changes to this project are recorded here.
 
+## [1.0.1] - 2026-09-18
+
+### Added
+
+- GitHub Action (`uses: repoboost-hq/github-launch-checklist@v1`) with a configurable `fail-under` threshold
+- Docker image published to GHCR: `ghcr.io/repoboost-hq/github-launch-checklist`
+- New `--fail-under N` CLI option (the `--strict` flag remains as an alias for 8)
+- Self-check workflow that runs the action on this repository
+
 ## [1.0.0] - 2026-09-18
 
 ### Added

@@ -197,7 +197,9 @@ def main() -> int:
     ap.add_argument("--token", default=os.environ.get("GITHUB_TOKEN"),
                     help="GitHub token (optional, raises rate limit)")
     ap.add_argument("--json", action="store_true", help="Output results as JSON")
-    ap.add_argument("--strict", action="store_true", help="Exit 1 if readiness is below 8/10")
+    ap.add_argument("--strict", action="store_true", help="Fail if readiness is below 8/10 (same as --fail-under 8)")
+    ap.add_argument("--fail-under", type=int, default=0, metavar="N",
+                    help="Exit 1 if readiness is below N (e.g. --fail-under 8)")
     args = ap.parse_args()
 
     if "/" not in args.repo:
@@ -219,7 +221,8 @@ def main() -> int:
     else:
         print(render(repo, results))
 
-    if args.strict and score(results) < 8:
+    threshold = args.fail_under or (8 if args.strict else 0)
+    if threshold and score(results) < threshold:
         return 1
     return 0
 

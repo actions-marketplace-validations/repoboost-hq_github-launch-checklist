@@ -1,0 +1,16 @@
+name: Self check
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  checklist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit this repository with the action
+        uses: ./
+        with:
+          repo: repoboost-hq/github-launch-checklist
+          fail-under: '8'

@@ -1,0 +1,36 @@
+name: 'GitHub Launch Checklist'
+description: 'Audit a repository before launch - ten readiness checks scored 0-10'
+author: 'RepoBoost'
+branding:
+  icon: 'check-circle'
+  color: 'green'
+
+inputs:
+  repo:
+    description: 'Repository to audit in owner/repo format (defaults to the calling repository)'
+    required: false
+    default: ''
+  token:
+    description: 'GitHub token for API access (defaults to the workflow token)'
+    required: false
+    default: ''
+  fail-under:
+    description: 'Fail the step if the readiness score is below this value (0 disables)'
+    required: false
+    default: '8'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Install dependencies
+      shell: bash
+      run: pip install requests
+    - name: Run launch checklist
+      shell: bash
+      env:
+        GH_CHECK_TOKEN: ${{ inputs.token || github.token }}
+        GH_CHECK_REPO: ${{ inputs.repo }}
+      run: |
+        REPO="$GH_CHECK_REPO"
+        if [ -z "$REPO" ]; then REPO="$GITHUB_REPOSITORY"; fi
+        python "$GITHUB_ACTION_PATH/checklist.py" "$REPO" --token "$GH_CHECK_TOKEN" --fail-under "${{ inputs.fail-under }}"

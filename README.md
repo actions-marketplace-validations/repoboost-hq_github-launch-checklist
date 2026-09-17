@@ -80,6 +80,21 @@ github-launch-checklist owner/repo --strict   # exit 1 if readiness < 8/10
 
 Works on any public repository. No token required for occasional use.
 
+## 🤖 Use as a GitHub Action
+
+```yaml
+- uses: repoboost-hq/github-launch-checklist@v1
+  with:
+    repo: owner/repo     # optional - defaults to the calling repository
+    fail-under: 8        # optional - fails the step below this score
+```
+
+## 🐳 Docker
+
+```bash
+docker run --rm ghcr.io/repoboost-hq/github-launch-checklist owner/repo
+```
+
 ## 🧠 Why these ten checks
 
 GitHub search weighs a repository's name, description, topics, README and engagement together. Most repositories fail their first impression not because of the code, but because the name is vague, the About line is empty, the topics are missing or the README never explains how to install anything.
