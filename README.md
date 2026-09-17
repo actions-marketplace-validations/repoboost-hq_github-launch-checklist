@@ -9,6 +9,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/actions/workflow/status/repoboost-hq/github-launch-checklist/test.yml?style=flat&label=tests" alt="tests">
   <img src="https://img.shields.io/github/v/release/repoboost-hq/github-launch-checklist?style=flat&color=22C55E&label=release" alt="release">
+  <a href="https://github.com/marketplace/actions/github-launch-checklist"><img src="https://img.shields.io/badge/marketplace-available-22C55E?logo=github&logoColor=white" alt="GitHub Marketplace"></a>
   <img src="https://img.shields.io/badge/python-3.9%2B-3776AB?style=flat&logo=python&logoColor=white" alt="python 3.9+">
   <img src="https://img.shields.io/github/license/repoboost-hq/github-launch-checklist?style=flat&color=34d399" alt="license">
   <img src="https://img.shields.io/github/last-commit/repoboost-hq/github-launch-checklist?style=flat&color=22c55e&label=last%20commit" alt="last commit">
@@ -81,6 +82,8 @@ github-launch-checklist owner/repo --strict   # exit 1 if readiness < 8/10
 Works on any public repository. No token required for occasional use.
 
 ## 🤖 Use as a GitHub Action
+
+Available on the [GitHub Marketplace](https://github.com/marketplace/actions/github-launch-checklist) - add it to any workflow in one step.
 
 ```yaml
 - uses: repoboost-hq/github-launch-checklist@v1
