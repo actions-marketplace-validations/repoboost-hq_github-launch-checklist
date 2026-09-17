@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "github-launch-checklist"
+version = "1.0.0"
+description = "Audit a GitHub repository before launch - ten readiness checks, scored 0-10"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "RepoBoost", email = "support@buygithub.com"}]
+keywords = ["github", "launch", "checklist", "repository", "seo"]
+dependencies = ["requests>=2.28.0"]
+
+[project.urls]
+Homepage = "https://buygithub.com/?utm_source=github&utm_medium=readme&utm_campaign=github-launch-checklist"
+Repository = "https://github.com/repoboost-hq/github-launch-checklist"
+Issues = "https://github.com/repoboost-hq/github-launch-checklist/issues"
+
+[project.scripts]
+github-launch-checklist = "checklist:main"
+
+[tool.setuptools]
+py-modules = ["checklist"]

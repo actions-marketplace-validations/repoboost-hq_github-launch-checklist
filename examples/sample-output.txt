@@ -1,0 +1,17 @@
+GitHub Launch Readiness
+────────────────────────
+
+Repository name      ✓ descriptive and searchable
+Description          ✓ present and well sized
+Topics               ⚠ 3/5 recommended
+README               ✓ 743 words
+License              ✓ MIT
+Demo                 ✗ Missing - set a homepage, demo or docs link
+Installation         ✓ installation or quick start found
+Contributing guide   ✗ missing - add CONTRIBUTING.md
+Issue templates      ✓ templates present
+Social preview       ⚠ check manually in repo Settings
+
+Launch readiness: 6.5/10
+
+Repository: example/project-name
