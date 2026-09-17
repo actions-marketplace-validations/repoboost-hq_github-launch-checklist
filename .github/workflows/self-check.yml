@@ -14,3 +14,12 @@ jobs:
         with:
           repo: repoboost-hq/github-launch-checklist
           fail-under: '8'
+
+  published-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Audit this repository with the published action
+        uses: repoboost-hq/github-launch-checklist@v1
+        with:
+          repo: repoboost-hq/github-launch-checklist
+          fail-under: '8'
